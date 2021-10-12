@@ -1,0 +1,18 @@
+header.header.container
+	.header__inner
+		a.header__logo.logo(href=data.header.links.logo)
+			+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
+
+		button.header__burger.btn.js-burger(type="button")
+			span
+			span
+			span
+
+		nav.header__menu
+			.header__list
+				each object, key in data.header.menu
+					a.header__link.js-to-anchor(
+						href=object.url
+						data-link=key
+					)
+						!= object.name

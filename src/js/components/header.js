@@ -7,7 +7,7 @@ function openMenu() {
 		helpers.lockScroll(true, helpers.$header.find('.header__menu'), 'header');
 
 		helpers.$header.addClass('is-menu-opened');
-		$('.header__menu').removeClass('is-hidden');
+		// $('.header__menu').removeClass('is-hidden');
 
 		setImmediate(() => {
 			helpers.$body.css('padding-right', `${helpers.getScrollbarWidth()}px`);
@@ -83,12 +83,6 @@ function destroy() {
 	$('.js-burger').off('.header');
 	helpers.$document.off('.header');
 }
-
-// function width() {
-// console.log(helpers.winWidth);
-// }
-
-// width();
 
 export default {
 	init,

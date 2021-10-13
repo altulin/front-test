@@ -3,12 +3,14 @@ header.header.container
 		a.header__logo.logo(href=data.header.links.logo)
 			+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
 
-		button.header__burger.btn.js-burger(type="button")
+		button.header__burger.header__burger--open.btn.js-burger(type="button")
 			span
 			span
 			span
 
 		nav.header__menu
+			button.header__burger.header__burger--close.btn(type="button")
+				+svg('burger-close')
 			.header__list
 				each object, key in data.header.menu
 					a.header__link.js-to-anchor(
@@ -16,3 +18,6 @@ header.header.container
 						data-link=key
 					)
 						!= object.name
+
+			figure.header__img-wrap
+				+img-retina(`header-img`, `png`, `изображение`, `header__img`, `464`, `310`)

@@ -1,33 +1,39 @@
-main.home
-	+lazyPicture({
-		src: `${baseDir}images/mem.jpg`,
-		alt: 'Мемчик',
-	}).home__picture#hello
+main.main
+	section.candidate
+		.candidate__inner.container
 
-	p.home__text#necessarily
-		| Это стартовый шаблон для верстки!
-		br
-		br
-		| Обязательно посмотри реализацию:
-		br
-		| pug в папке #[code pug/(components|pages)],
-		br
-		| js в папке #[code js/(components|modules|pages)],
-		br
-		| scss в папке #[code scss/(components|pages)]
-		br
-		br
-		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
-		br
-		br
-		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+			.candidate__left
+				h1.candidate__title
+					| Имя кандидата,
+					br
+					| Желаемая позиция
 
-	//- picture.home__picture.home__picture--2#bye
-	+lazyPicture({
-		src: `${baseDir}images/mem-2.jpg`,
-		alt: 'Мемчик 2',
-	}, [
-		{
-			srcset: `${baseDir}images/mem-2.jpg`,
-		}
-	]).home__picture.home__picture--2#bye
+			.candidate__right.contacts
+				.contacts__inner
+					a.contacts__item.mail.link-hover(href="mailto:al.tulin@gmail.com")
+						span.link-hover__span(data-letters="al.tulin@gmail.com") al.tulin@gmail.com
+					a.contacts__item.phone.link-hover(href="tel:+7 (902) 515-96-32")
+						span.link-hover__span(data-letters="+7 (902) 515-96-32") +7 (902) 515-96-32
+					p.contacts__item.town г. Иркутск
+
+				.contacts__socials.socials
+					a.socials__item.socials__item--fb(href="#" aria-label="фэйсбук")
+						+svg("fb")
+					a.socials__item.socials__item--vk(href="#" aria-label="в контакте")
+						+svg("vk")
+					a.socials__item.socials__item--tg(href="https://t.me/altulin" aria-label="телеграмм")
+						+svg("tg")
+
+			.candidate__text-block
+
+				p.candidate__text Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+
+	section.standing
+		h2.standing__title.visually-hidden Мой стаж работы и образование
+			.standing__inner.container
+
+				.standing__left.experience
+					h3.experience__title.title Опыт работы
+
+				.standing__right.education
+					h3.education__title.title Образование

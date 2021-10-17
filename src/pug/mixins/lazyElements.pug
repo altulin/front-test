@@ -1,8 +1,8 @@
 //- @demo +lazyImage({
-		src: `${baseDir}images/path.type`,
-		srcset: `${baseDir}images/path@2x.type 2x`,
-		alt: '',
-		appear: false,
+	src: `${baseDir}images/path.type`,
+	srcset: `${baseDir}images/path@2x.type 2x`,
+	alt: '',
+	appear: false,
 	}).class(attrs)
 mixin lazyImage(data)
 	img.image.js-lazy(
@@ -19,15 +19,15 @@ mixin lazyImage(data)
 			img(src=data.src alt=data.alt)
 
 //- @demo +lazyPicture({
-			src: 'photo.jpg',
-			alt: '',
-			appear: false,
+	src: 'photo.jpg',
+	alt: '',
+	appear: false,
 		}, [
-				{
-					srcset: `${baseDir}images/path.type 1x, ${baseDir}images/path@2x.type 2x`,
-					media: '(min-width: 320px)',
-				}
-			]
+			{
+				srcset: `${baseDir}images/path.type 1x, ${baseDir}images/path@2x.type 2x`,
+				media: '(min-width: 320px)',
+			}
+	]
 		).class(attrs)
 mixin lazyPicture(data, source)
 	picture.lozad.js-lazy(
@@ -56,13 +56,13 @@ mixin lazyBackground(url)
 	)&attributes(attributes)
 
 //- @demo +lazyVideo({
-		poster: '',
-		source: [
-			{
-				srcset: `${baseDir}path.type`,
-				type: 'video/{type}',
-			}
-		]
+	poster: '',
+	source: [
+		{
+			srcset: `${baseDir}path.type`,
+			type: 'video/{type}',
+		}
+	]
 	}).class(attrs)
 mixin lazyVideo(data)
 	video.js-lazy(data-poster=data.poster)&attributes(attributes)

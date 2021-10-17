@@ -30,10 +30,28 @@ main.main
 
 	section.standing
 		h2.standing__title.visually-hidden Мой стаж работы и образование
-			.standing__inner.container
+		.standing__inner.container
 
-				.standing__left.experience
-					h3.experience__title.title Опыт работы
+			.standing__left.experience
+				h3.experience__title.title Опыт работы
+				ul.experience__list
+					each item, key in data.points
+						li.experience__item.point
+							p.point__item.point__date= item.date
+							.pointer__item.corp
+								if item.logo
+									.logo__inner
+										figure.corp__logo(class=`logo__img-${key}`)
+										p.corp__slogan= item.logo
+								p.corp__title(class=`corp__title-${key}`)= item.corp
 
-				.standing__right.education
-					h3.education__title.title Образование
+							p.pointer__item.pointer__text= item.desk
+
+							if item.link_1
+								a.pointer__item.pointer__link(href="#")= item.link_1
+
+							if item.link_2
+								a.pointer__item.pointer__link(href="#")= item.link_2
+
+			.standing__right.education
+				h3.education__title.title Образование

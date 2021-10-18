@@ -1,0 +1,261 @@
+.standing {
+	&__title {
+		//
+	}
+
+	&__inner {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__left {
+		width: 47%;
+	}
+
+	&__right {
+		//
+	}
+
+	&__man {
+		//
+	}
+}
+
+.visually-hidden {
+	//
+}
+
+.container {
+	//
+}
+
+.experience {
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		//
+	}
+
+	&__item {
+		//
+	}
+}
+
+.title {
+	margin-top: 0;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.pointer {
+	+ li {
+		margin-top: 60px;
+	}
+
+	&__item {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&__text {
+		margin-bottom: 8px;
+	}
+
+	&__date {
+		margin-bottom: 8px;
+		font-size: 14px;
+		line-height: 17px;
+		color: $color-gray;
+	}
+
+	&__link {
+		display: block;
+		margin-bottom: 3px;
+		text-decoration: underline;
+		color: $color-link;
+	}
+}
+
+.corp {
+	margin-bottom: 8px;
+
+	&__title {
+		display: flex;
+		font-weight: 700;
+	}
+
+	&__title-0 {
+		//
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+
+	&__rhombus {
+		//
+	}
+
+	&__logo {
+		display: block;
+		margin-right: 8px;
+		width: 30px;
+		height: 30px;
+
+		&--1 {
+			background-image: url("/images/logo-1.png");
+		}
+
+		&--2 {
+			background-image: url("/images/logo-2.png");
+		}
+
+		&--3 {
+			background-image: url("/images/logo-3.png");
+		}
+
+		&--4 {
+			background-image: url("/images/logo-4.png");
+		}
+	}
+
+	&__slogan {
+		font-weight: 700;
+	}
+
+	&__title-1 {
+		//
+	}
+
+	&__title-2 {
+		//
+	}
+
+	&__title-3 {
+		//
+	}
+
+	&__title-4 {
+		//
+	}
+}
+
+.rhombus {
+	display: flex;
+	margin-left: 8px;
+
+	&__item {
+		display: block;
+		margin-right: -8px;
+		width: 16px;
+		height: 16px;
+	}
+
+	&__item-1 {
+		background-image: url("/images/rhombus-1.png");
+	}
+
+	&__item-2 {
+		background-image: url("/images/rhombus-2.png");
+	}
+
+	&__item-3 {
+		background-image: url("/images/rhombus-3.png");
+	}
+
+	&__item-4 {
+		background-image: url("/images/rhombus-4.png");
+	}
+}
+
+.logo {
+	&__inner {
+		//
+	}
+
+	&__img-1 {
+		//
+	}
+
+	&__img-2 {
+		//
+	}
+
+	&__img-3 {
+		//
+	}
+
+	&__img-4 {
+		//
+	}
+}
+
+.education {
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		//
+	}
+
+	&__item {
+		//
+	}
+}
+
+.skill {
+	&__img {
+		//
+	}
+
+	&__img-1 {
+		//
+	}
+
+	&__job {
+		//
+	}
+
+	&__text {
+		//
+	}
+
+	&__img-2 {
+		//
+	}
+
+	&__img-3 {
+		//
+	}
+
+	&__img-4 {
+		//
+	}
+
+	&__img-5 {
+		//
+	}
+
+	&__img-6 {
+		//
+	}
+}
+
+.man {
+	position: absolute;
+
+	&__img-wrap {
+		//
+	}
+
+	&__img {
+		//
+	}
+}

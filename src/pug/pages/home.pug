@@ -36,14 +36,20 @@ main.main
 				h3.experience__title.title Опыт работы
 				ul.experience__list
 					each item, key in data.points
-						li.experience__item.point
-							p.point__item.point__date= item.date
+						li.experience__item.pointer
+							p.pointer__item.pointer__date= item.date
 							.pointer__item.corp
 								if item.logo
-									.logo__inner
-										figure.corp__logo(class=`logo__img-${key}`)
+									.corp__inner
+										figure.corp__logo(class=`corp__logo--${key}`)
 										p.corp__slogan= item.logo
 								p.corp__title(class=`corp__title-${key}`)= item.corp
+									span.corp__rhombus.rhombus
+										- let num = Math.floor(Math.random() * 4) + 1;
+										- let n = 0;
+										while n<num
+											- n++
+											span.rhombus__item(class=`rhombus__item-${n}`)
 
 							p.pointer__item.pointer__text= item.desk
 
@@ -55,3 +61,13 @@ main.main
 
 			.standing__right.education
 				h3.education__title.title Образование
+				ul.education__list
+					each item, key in data.skills
+						li.education__item.skill
+							figure.skill__img(class=`skill__img-${key + 1}`)
+							p.skill__job= item.job
+							p.skill__text= item.text
+
+			.standing__man.man
+				figure.man__img-wrap
+					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`)

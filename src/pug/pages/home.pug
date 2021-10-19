@@ -1,4 +1,4 @@
-main.main
+main.main(data-scroll-section)
 	section.candidate
 		.candidate__inner.container
 
@@ -68,6 +68,6 @@ main.main
 							p.skill__job= item.job
 							p.skill__text= item.text
 
-			.standing__man.man
-				figure.man__img-wrap()
+			.standing__man.man(data-scroll="true" data-scroll-sticky data-scroll-target=".standing__inner")
+				figure.man__img-wrap
 					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`)

@@ -1,6 +1,7 @@
 import './vendor';
 import './helpers';
 import './components/social';
+import makeScroll from './components/scroll-man';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
@@ -17,3 +18,4 @@ scrollToAnchor.init();
 
 header.init();
 lazyLoading.init();
+makeScroll();

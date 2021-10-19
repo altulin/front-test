@@ -1,5 +1,6 @@
 .header {
 	// position: fixed;
+	position: relative;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -7,6 +8,7 @@
 	margin-right: auto;
 	margin-bottom: 40px;
 	margin-left: auto;
+	background-color: #fafafa;
 }
 
 .header__inner {

@@ -11,7 +11,8 @@ const init = () => {
 
 		const id = $(e.currentTarget).attr('href');
 		const speed = $(e.currentTarget).data('speed') || 500;
-		// const offset = helpers.$header.css('position') === 'fixed' || helpers.$header.css('position') === 'absolute' ? -helpers.$header.outerHeight(true) : 0;
+		// const offset = helpers.$header.css('position') ===
+		// 'fixed' || helpers.$header.css('position') === 'absolute' ? -helpers.$header.outerHeight(true) : 0;
 
 		header.closeMenu().then(() => {
 			$('.js-burger').removeClass('is-active');

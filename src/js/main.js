@@ -10,6 +10,7 @@ import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 
 ieFix();
+
 vhFix();
 actualYear();
 scrollToAnchor.init();

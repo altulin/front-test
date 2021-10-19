@@ -7,6 +7,10 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+
+		@include devices {
+			flex-direction: column;
+		}
 	}
 
 	&__left {
@@ -270,12 +274,19 @@
 
 .man {
 	position: absolute;
+	left: 40%;
+	top: 0;
+	width: 42%;
 
 	&__img-wrap {
 		//
 	}
 
 	&__img {
-		//
+		height: auto;
+	}
+
+	@include devices {
+		position: static;
 	}
 }

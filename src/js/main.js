@@ -5,6 +5,7 @@ import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
 import header from './components/header';
+import './components/scroll-man';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 

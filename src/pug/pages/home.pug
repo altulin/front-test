@@ -24,13 +24,13 @@ main.main(data-scroll-section)
 					a.socials__item.socials__item--tg(href="https://t.me/altulin" aria-label="телеграмм")
 						+svg("tg")
 
-			.candidate__text-block
+			.candidate__text-block()
 
-				p.candidate__text Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+				p.candidate__text() Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
 
 	section.standing
 		h2.standing__title.visually-hidden Мой стаж работы и образование
-		.standing__inner.container
+		.standing__inner.container()
 
 			.standing__left.experience
 				h3.experience__title.title Опыт работы
@@ -68,6 +68,15 @@ main.main(data-scroll-section)
 							p.skill__job= item.job
 							p.skill__text= item.text
 
-			.standing__man.man(data-scroll="true" data-scroll-sticky data-scroll-target=".standing__inner")
+			.standing__man.man()
 				figure.man__img-wrap
-					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`)
+					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`, 768)
+
+	section.attainments
+		.attainments__inner.container
+			h2.attainments__title.title Навыки
+			ul.attainments__item
+				each item in data.attainments
+					li.attainments__item
+						h3.attainments__sub-title= item.title
+						p.attainments__text= item.text

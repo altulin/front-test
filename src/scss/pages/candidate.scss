@@ -50,6 +50,10 @@
 	&__right {
 		width: 100%;
 		max-width: 261px;
+
+		@include devices {
+			order: 1;
+		}
 	}
 }
 

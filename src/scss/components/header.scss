@@ -6,34 +6,20 @@
 	top: 0;
 	z-index: 1;
 	margin-right: auto;
-	margin-bottom: 40px;
 	margin-left: auto;
-	background-color: #fafafa;
 
 	@include devices {
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 	}
 }
 
 .header__inner {
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: flex-end;
 	padding-top: 100px;
 
 	@include devices {
 		padding-top: 20px;
-	}
-}
-
-.header__logo {
-	display: flex;
-	width: 150px;
-	height: 150px;
-
-	@include devices {
-		width: 80px;
-		height: 80px;
 	}
 }
 

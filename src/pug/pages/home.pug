@@ -3,6 +3,10 @@ main.main
 		.candidate__inner.container
 
 			.candidate__left(data-aos="fade-up" data-aos-duration="1000")
+
+				a.candidate__logo.logo(href=data.header.links.logo)
+					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
+
 				h1.candidate__title
 					| Имя кандидата,
 					br

@@ -16,11 +16,30 @@
 		}
 	}
 
+	&__text-block {
+		margin-top: 10px;
+	}
+
+	&__logo {
+		display: flex;
+		margin-bottom: 40px;
+		width: 150px;
+		height: 150px;
+
+		@include devices {
+			margin-bottom: 30px;
+			width: 80px;
+			height: 80px;
+		}
+	}
+
 	&__left {
+		padding-bottom: 20px;
 		max-width: 560px;
 
 		@include devices {
-			margin-bottom: 14px;
+			margin-bottom: 12px;
+			padding-bottom: 0;
 		}
 	}
 
@@ -36,10 +55,6 @@
 		}
 	}
 
-	&__text-block {
-		margin-top: 9px;
-	}
-
 	&__text {
 		max-width: 560px;
 		font-weight: 400;
@@ -48,12 +63,15 @@
 	}
 
 	&__right {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		width: 100%;
 		max-width: 270px;
 
 		@include devices {
 			order: 1;
-			margin-top: 20px;
+			margin-top: 21px;
 		}
 	}
 }

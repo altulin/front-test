@@ -9,6 +9,10 @@
 	margin-bottom: 40px;
 	margin-left: auto;
 	background-color: #fafafa;
+
+	@include devices {
+		margin-bottom: 30px;
+	}
 }
 
 .header__inner {
@@ -114,7 +118,7 @@
 .header__link {
 	position: relative;
 	display: block;
-	padding: 5px;
+	padding: 0 5px 5px;
 	font-weight: 700;
 	font-size: 18px;
 	color: $color-text;
@@ -146,7 +150,7 @@
 	}
 
 	+ a {
-		margin-left: 15px;
+		margin-left: 20px;
 	}
 
 	&:focus {
@@ -158,6 +162,12 @@
 	@include hover {
 		&::after {
 			opacity: 1;
+		}
+
+		&:focus {
+			&::after {
+				opacity: 0;
+			}
 		}
 	}
 

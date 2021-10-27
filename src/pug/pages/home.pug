@@ -1,8 +1,8 @@
-main.main(data-scroll-section)
-	section.candidate
+main.main
+	section.candidate#resume(data-scroll-section="true")
 		.candidate__inner.container
 
-			.candidate__left
+			.candidate__left(data-aos="fade-up" data-aos-duration="1000")
 				h1.candidate__title
 					| Имя кандидата,
 					br
@@ -26,11 +26,11 @@ main.main(data-scroll-section)
 
 			.candidate__text-block()
 
-				p.candidate__text() Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+				p.candidate__text(data-aos="fade-up" data-aos-duration="1000") Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
 
-	section.standing
+	section.standing#about(data-scroll-section="true")
 		h2.standing__title.visually-hidden Мой стаж работы и образование
-		.standing__inner.container()
+		.standing__inner.container
 
 			.standing__left.experience
 				h3.experience__title.title Опыт работы
@@ -38,11 +38,9 @@ main.main(data-scroll-section)
 					each item, key in data.points
 						li.experience__item.pointer
 							p.pointer__item.pointer__date= item.date
+
 							.pointer__item.corp
-								if item.logo
-									.corp__inner
-										figure.corp__logo(class=`corp__logo--${key}`)
-										p.corp__slogan= item.logo
+
 								p.corp__title(class=`corp__title-${key}`)= item.corp
 									span.corp__rhombus.rhombus
 										- let num = Math.floor(Math.random() * 4) + 1;
@@ -50,6 +48,13 @@ main.main(data-scroll-section)
 										while n<num
 											- n++
 											span.rhombus__item(class=`rhombus__item-${n}`)
+
+								.corp__inner
+									if item.logo
+										figure.corp__logo(class=`corp__logo--${key}`)
+										p.corp__slogan= item.logo
+
+									p.pointer__item.pointer__location= item.location
 
 							p.pointer__item.pointer__text= item.desk
 
@@ -72,10 +77,10 @@ main.main(data-scroll-section)
 				figure.man__img-wrap
 					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`, 768)
 
-	section.attainments
+	section.attainments#skills(data-scroll-section="true")
 		.attainments__inner.container
 			h2.attainments__title.title Навыки
-			ul.attainments__item
+			ul.attainments__list
 				each item in data.attainments
 					li.attainments__item
 						h3.attainments__sub-title= item.title

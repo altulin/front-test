@@ -7,6 +7,7 @@ $color-gray: #828282;
 $color-text: #282a33;
 $color-back: #fafafa;
 $color-link: #2f80ed;
+$color-red: #d2233c;
 
 // FONTS
 // stylelint-disable-next-line
@@ -29,5 +30,5 @@ $desktop-vh: 750;
 
 // container
 
-$gap: 20;
+$gap: 21;
 $container: 1140 + $gap * 2;

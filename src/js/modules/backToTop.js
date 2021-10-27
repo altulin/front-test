@@ -1,4 +1,5 @@
 import helpers from '../helpers';
+import toTop from '../components/svgAnimation';
 
 /**
 * Модуль "Возврат наверх"
@@ -17,14 +18,15 @@ const init = () => {
 
 		if (scrollTop > window.innerHeight) {
 			if (lastScrollTop > scrollTop) {
-				$(className).addClass(shownClass);
+				// $(className).removeClass(shownClass);
 			} else {
-				$(className).removeClass(shownClass);
+				$(className).addClass(shownClass);
+				toTop.play(4);
 			}
 		} else {
 			$(className).removeClass(shownClass);
+			toTop.stop().reset();
 		}
-
 		lastScrollTop = scrollTop;
 	});
 };

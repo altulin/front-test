@@ -1,12 +1,10 @@
 .standing {
-	&__title {
-		//
-	}
+	margin-top: -55px;
+	margin-bottom: 50px;
 
 	&__inner {
 		position: relative;
 		display: flex;
-		justify-content: space-between;
 
 		@include devices {
 			flex-direction: column;
@@ -14,41 +12,27 @@
 	}
 
 	&__left {
-		width: 47%;
+		width: 50%;
 
 		@include devices {
+			margin-bottom: 53px;
 			width: auto;
 		}
 	}
 
-	&__right {
-		//
+	@include devices {
+		margin-top: -28px;
+		margin-bottom: 93px;
 	}
-
-	&__man {
-		//
-	}
-}
-
-.visually-hidden {
-	//
-}
-
-.container {
-	//
 }
 
 .experience {
 	&__title {
 		margin-bottom: 30px;
-	}
 
-	&__list {
-		//
-	}
-
-	&__item {
-		//
+		@include devices {
+			margin-bottom: 18px;
+		}
 	}
 }
 
@@ -74,7 +58,8 @@
 	}
 
 	&__text {
-		margin-bottom: 8px;
+		margin-bottom: 4px;
+		line-height: 1.4;
 	}
 
 	&__date {
@@ -97,21 +82,13 @@
 
 	&__title {
 		display: flex;
+		margin-bottom: 8px;
 		font-weight: 700;
-	}
-
-	&__title-0 {
-		//
 	}
 
 	&__inner {
 		display: flex;
 		align-items: center;
-		margin-bottom: 8px;
-	}
-
-	&__rhombus {
-		//
 	}
 
 	&__logo {
@@ -138,23 +115,8 @@
 	}
 
 	&__slogan {
+		margin-right: 8px;
 		font-weight: 700;
-	}
-
-	&__title-1 {
-		//
-	}
-
-	&__title-2 {
-		//
-	}
-
-	&__title-3 {
-		//
-	}
-
-	&__title-4 {
-		//
 	}
 }
 
@@ -186,37 +148,25 @@
 	}
 }
 
-.logo {
-	&__inner {
-		//
-	}
-
-	&__img-1 {
-		//
-	}
-
-	&__img-2 {
-		//
-	}
-
-	&__img-3 {
-		//
-	}
-
-	&__img-4 {
-		//
-	}
-}
-
 .education {
+	margin-left: auto;
+	width: 100%;
+	max-width: 271px;
+
 	&__title {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@include devices {
+			margin-bottom: 22px;
+			text-align: left;
+		}
 	}
 
 	&__list {
 		margin-right: auto;
 		margin-left: auto;
-		max-width: 150px;
+		max-width: 138px;
 
 		@include devices {
 			display: flex;
@@ -228,8 +178,9 @@
 		}
 	}
 
-	&__item {
-		//
+	@include devices {
+		order: 1;
+		max-width: none;
 	}
 }
 
@@ -241,6 +192,14 @@
 	font-size: 14px;
 	line-height: 140%;
 
+	+ li {
+		margin-top: 37px;
+
+		@include devices {
+			margin-top: 0;
+		}
+	}
+
 	li {
 		margin-top: 30px;
 
@@ -250,11 +209,11 @@
 	}
 
 	&__img {
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 		width: 30px;
 		height: 30px;
 		background-position: center;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 	}
 
@@ -265,11 +224,13 @@
 
 	&__job {
 		margin-bottom: 5px;
+		max-width: 100%;
 		font-weight: 700;
 		text-align: center;
 	}
 
 	&__text {
+		max-width: 100%;
 		text-align: center;
 	}
 
@@ -302,13 +263,9 @@
 
 .man {
 	position: absolute;
-	left: 40%;
-	top: 0;
+	left: 41.3%;
+	top: -7px;
 	width: 42%;
-
-	&__img-wrap {
-		//
-	}
 
 	&__img {
 		height: auto;
@@ -316,6 +273,7 @@
 
 	@include devices {
 		position: static;
+		margin-bottom: 45px;
 	}
 
 	@include mobile {

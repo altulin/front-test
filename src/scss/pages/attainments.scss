@@ -1,0 +1,63 @@
+.attainments {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	&__inner {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-top: 190px;
+		background-image: url("/images/attainments.png");
+		background-position: center top;
+		background-repeat: no-repeat;
+
+		@include devices {
+			padding-top: 50px;
+			background-image: url("/images/attainments-768.png");
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		@include devices {
+			margin-bottom: 16px;
+			font-size: 22px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		@include devices {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		width: calc(25% - 15px);
+
+		@include devices {
+			width: 100%;
+
+			+ li {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&__sub-title {
+		margin-top: 0;
+		margin-bottom: 11px;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&__text {
+		font-size: 14px;
+	}
+}

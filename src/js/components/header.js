@@ -84,9 +84,25 @@ function destroy() {
 	helpers.$document.off('.header');
 }
 
+const makeStickyHeader = () => {
+	const header = $('.header');
+	// const deviceWidth = 1024;
+	const top = 0;
+
+	if (header.length > 0) {
+		header.sticky(
+			{
+				wrapperClassName: 'main-body__header-wrapper',
+				topSpacing: top,
+			},
+		);
+	}
+};
+
 export default {
 	init,
 	destroy,
 	openMenu,
 	closeMenu,
+	makeStickyHeader,
 };

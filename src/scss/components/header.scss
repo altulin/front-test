@@ -15,11 +15,14 @@
 
 .header__inner {
 	display: flex;
+	align-items: flex-end;
 	justify-content: flex-end;
-	padding-top: 100px;
+	height: 125px;
+	transition: height $duration-long;
 
 	@include devices {
-		padding-top: 20px;
+		padding-top: 0;
+		height: 50px;
 	}
 }
 
@@ -188,4 +191,25 @@
 
 .header__img {
 	height: auto;
+}
+
+.is-sticky {
+	.header {
+		background-color: $color-back;
+
+		&__inner {
+			align-items: center;
+			height: 50px;
+		}
+
+		@include hover {
+			.header__inner {
+				//
+			}
+		}
+	}
+
+	&.main-body__header-wrapper {
+		z-index: 1;
+	}
 }

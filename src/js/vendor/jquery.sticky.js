@@ -30,6 +30,7 @@
       bottomSpacing: 0,
       className: 'is-sticky',
       wrapperClassName: 'sticky-wrapper',
+      wrapperIdName: 'sticky-wrapper',
       center: false,
       getWidthFrom: '',
       widthFromWrapper: true, // works only when .getWidthFrom is empty

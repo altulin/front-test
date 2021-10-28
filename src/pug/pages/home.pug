@@ -1,13 +1,13 @@
 main.main
-	section.candidate#resume(data-scroll-section="true")
+	section.candidate#resume
 		.candidate__inner.container
 
-			.candidate__left(data-aos="fade-up" data-aos-duration="1000")
+			.candidate__left
 
 				a.candidate__logo.logo(href=data.header.links.logo)
 					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
 
-				h1.candidate__title
+				h1.candidate__title(data-aos="fade-up" data-aos-duration="1000")
 					| Имя кандидата,
 					br
 					| Желаемая позиция
@@ -28,11 +28,11 @@ main.main
 					a.socials__item.socials__item--tg(href="https://t.me/altulin" aria-label="телеграмм")
 						+svg("tg")
 
-			.candidate__text-block()
+			.candidate__text-block(data-aos="fade-up" data-aos-duration="1000")
 
 				p.candidate__text(data-aos="fade-up" data-aos-duration="1000") Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
 
-	section.standing#about(data-scroll-section="true")
+	section.standing#about
 		h2.standing__title.visually-hidden Мой стаж работы и образование
 		.standing__inner.container
 
@@ -81,7 +81,7 @@ main.main
 				figure.man__img-wrap
 					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`, 768)
 
-	section.attainments#skills(data-scroll-section="true")
+	section.attainments#skills
 		.attainments__inner.container
 			h2.attainments__title.title Навыки
 			ul.attainments__list

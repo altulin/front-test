@@ -37,6 +37,13 @@ body {
 	background-color: $color-back;
 }
 
+.main-body {
+	&__header-wrapper {
+		height: 125px;
+		transition: height $duration-long;
+	}
+}
+
 main {
 	flex: 1;
 }

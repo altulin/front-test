@@ -12,6 +12,9 @@ import './components/scroll-man';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import backToTop from './modules/backToTop';
+import makePreload from './modules/preload';
+
+makePreload();
 
 ieFix();
 
@@ -20,6 +23,7 @@ actualYear();
 scrollToAnchor.init();
 
 header.init();
+header.makeStickyHeader();
 lazyLoading.init();
 // makeScroll();
 backToTop.init();

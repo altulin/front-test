@@ -282,31 +282,19 @@ html(class=html.classList)&attributes(html.attrs)
 		block head-end
 	body.main-body(class=body.classList)&attributes(body.attrs)
 
+		section.main-body__preloader.preloader#preloader
+			figure.preloader__img-wrap
+				+img-retina(`preloader`, `png`, `preloader`, `preloader__img`, `591`, `591`)
+
 		block body-start
 		block content
 		block scripts
-			//- script.
-				document.body.classList.add('loading');
-				console.log(`1111111111111111`)
-				window.onload = function () {
-					console.log(`2`)
-					//- document.body.classList.add('loaded_hiding');
-					window.setTimeout(function () {
-						//- document.body.classList.add('loaded');
-						document.body.classList.remove('loading');
-					}, 0);
-				};
-
 			script.
 				if (!('IntersectionObserver' in window)) {
 					var script = document.createElement("script");
 					script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
 					document.getElementsByTagName('head')[0].appendChild(script);
 				}
-			//- script(nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous")
-
-			//- script(nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous")
-
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
 		block body-end

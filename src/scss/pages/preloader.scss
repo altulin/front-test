@@ -1,0 +1,22 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	background-color: $color-back;
+
+	&__img-wrap {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 41%;
+		transform: translate(-100%, 100%);
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+}

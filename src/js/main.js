@@ -12,9 +12,7 @@ import './components/scroll-man';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import backToTop from './modules/backToTop';
-import makePreload from './modules/preload';
-
-makePreload();
+import './modules/preloader';
 
 ieFix();
 

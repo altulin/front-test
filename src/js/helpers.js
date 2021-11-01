@@ -10,6 +10,7 @@ vars.isMobile = () => innerWidth <= 1024;
 vars.isIE = () => vars.$html.hasClass('is-browser-ie');
 vars.isIOS = () => vars.$html.hasClass('is-os-ios');
 vars.winWidth = window.innerWidth;
+vars.winHeight = window.innerHeight;
 
 /**
 * Очистить текст от спецсимволов

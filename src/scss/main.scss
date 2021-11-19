@@ -16,3 +16,7 @@
 @import "pages/standing";
 @import "pages/attainments";
 @import "pages/preloader";
+
+* {
+	outline: 1px solid $color-red;
+}

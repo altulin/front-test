@@ -4,18 +4,25 @@
 const imagesAll = document.images;
 // Get all images qty
 const imagesTotalCount = imagesAll.length;
+// const imagesTotalCountView = imagesTotalCount - 2;
 // Set image counter
 let imagesLoadedCount = 0;
 // Get preloader block
 const preloader = document.querySelector('#preloader');
-// const preloaderImg = preloader.querySelector('.preloader__img-wrap');
+const preloaderImg = preloader.querySelector('.preloader__img-wrap');
 // Get percent block
 // let showPercent = document.querySelector('#percent');
 // Get progress block
 // let showProgress = document.querySelector('.progress');
 // const diagonal = Math.trunc(Math.sqrt(Math.pow(helpers.winWidth, 2) + Math.pow(helpers.winHeight, 2)));
-// const stepHeight = helpers.winHeight / imagesTotalCount;
+// const stepHeight = Math.trunc(helpers.winHeight / imagesTotalCountView);
 // const stepWidth = helpers.winWidth / imagesTotalCount;
+// const height = $(preloaderImg).height();
+// const width = $(preloaderImg).width();
+
+// console.log(stepHeight);
+
+// let i = 0;
 
 // let newPosition = (x, y) => {
 // 	$(preloaderImg).css({
@@ -26,9 +33,20 @@ const preloader = document.querySelector('#preloader');
 // 	});
 // };
 
+$(preloaderImg).css(
+	{
+		// opacity: 1,
+		// left: `-${width}px`,
+		// bottom: `-${height}px`,
+	},
+);
+
 // Run counter and showing loader progress
 function imageLoader() {
 	// Add plus image counter
+	// const newBottom = imagesLoadedCount * stepHeight + (stepHeight - height) / 2;
+	// console.log(newBottom);
+
 	imagesLoadedCount++;
 	// Calc percent from tolal images to loaded
 	// let calcPercent = `${Math.trunc(100 / imagesTotalCount * imagesLoadedCount)}`;
@@ -38,11 +56,20 @@ function imageLoader() {
 	// showProgress.style.width = calcPercent;
 	// console.log(imagesAll);
 	// console.log(imagesLoadedCount);
+	// newPosition(stepWidth * imagesLoadedCount, stepHeight * imagesLoadedCount);
 
-	// setTimeout(() => {
-	// 	newPosition(stepWidth * imagesLoadedCount, stepHeight * imagesLoadedCount);
-	// 	console.log(imagesLoadedCount);
-	// }, 2000);
+	// $(preloaderImg).css(
+	// {transform: `translate(${stepWidth * imagesLoadedCount - width}px, ${stepHeight * imagesLoadedCount}px)`});
+	// $(preloaderImg)
+	// .css({transform: `translate(${stepWidth * imagesLoadedCount + width / 2}px, ${helpers.winHeight}px`});
+
+	if (imagesLoadedCount === 1) {
+		// console.log(height);
+		// console.log(width);
+		// $(preloaderImg).css(
+		// {transform: `translate(${stepWidth * imagesLoadedCount + width}px, ${stepHeight * imagesLoadedCount}px)`});
+		// $(preloaderImg).css({transform: `translate(${stepWidth * imagesLoadedCount + width / 2}px, 0px`});
+	}
 
 	// Check and stop when all images was loaded
 	if (imagesLoadedCount >= imagesTotalCount) {
@@ -68,7 +95,8 @@ function imageLoader() {
 
 // Сycle start
 for (let image of imagesAll) {
-	// Create new images elements
+	// i++;
+	// console.log();
 	const imageClone = new Image();
 	// Assign the origin image path to new image
 	// const startTime = new Date();
@@ -78,10 +106,11 @@ for (let image of imagesAll) {
 		// const endTime = new Date();
 		// const elapsed = endTime.getTime() - startTime.getTime();
 		imageLoader();
+		// console.log(elapsed);
 
-		setTimeout(() => {
-			// console.log(elapsed);
-		}, 2000);
+		// setTimeout(() => {
+
+		// }, 2000);
 	});
 	// Start Listener on erroe
 	// imageClone.addEventListener('error', () => {

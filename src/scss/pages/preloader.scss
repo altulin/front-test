@@ -10,12 +10,17 @@
 	&__img-wrap {
 		position: absolute;
 		left: 0;
-		bottom: 0;
-		width: 41%;
-		transform: translate(-100%, 100%);
+
+		// right: 100%;
+		// bottom: 0;
+		top: 100%;
+		transition-property: transform;
+
+		// opacity: 0;
 	}
 
 	&__img {
+		display: block;
 		width: 100%;
 		height: auto;
 	}

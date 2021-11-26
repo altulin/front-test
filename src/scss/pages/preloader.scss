@@ -6,17 +6,15 @@
 	bottom: 0;
 	z-index: 100;
 	background-color: $color-back;
+	transition: opacity $duration-normal;
 
 	&__img-wrap {
 		position: absolute;
-		left: 0;
-
-		// right: 100%;
-		// bottom: 0;
+		right: 100%;
 		top: 100%;
+		width: 41%;
+		max-width: 591px;
 		transition-property: transform;
-
-		// opacity: 0;
 	}
 
 	&__img {
@@ -24,4 +22,9 @@
 		width: 100%;
 		height: auto;
 	}
+}
+
+.preloader-style__loader__done {
+	// opacity: 0;
+	display: none;
 }

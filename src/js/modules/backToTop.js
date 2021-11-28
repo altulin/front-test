@@ -7,6 +7,8 @@ import toTop from '../components/svgAnimation';
 const init = () => {
 	const className = '.js-back-to-top';
 	const shownClass = 'is-shown';
+	const footerHeight = $('.footer').outerHeight();
+	const windowHeight = helpers.$window.height();
 	let lastScrollTop = 0;
 
 	helpers.$document.on('click.backTop', `${className}`, () => {
@@ -14,9 +16,10 @@ const init = () => {
 	});
 
 	helpers.$window.on('scroll.backTop', () => {
-		const scrollTop = window.pageYOffset;
+		const scrollTop = helpers.$window.scrollTop();
+		const bodyHeight = helpers.$document.height();
 
-		if (scrollTop > window.innerHeight) {
+		if (scrollTop + windowHeight >= bodyHeight - footerHeight) {
 			if (lastScrollTop > scrollTop) {
 				// $(className).removeClass(shownClass);
 			} else {

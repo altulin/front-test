@@ -12,6 +12,7 @@ import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import backToTop from './modules/backToTop';
 import './modules/preloader';
+import progress from './components/progress';
 
 ieFix();
 
@@ -24,3 +25,4 @@ header.makeStickyHeader();
 lazyLoading.init();
 backToTop.init();
 getStickyBlock();
+progress();

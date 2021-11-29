@@ -57,6 +57,16 @@
 	}
 }
 
+.is-os-mac-os {
+	.footer__up {
+		display: none;
+
+		&--mac {
+			display: block;
+		}
+	}
+}
+
 .percent {
 	&__val {
 		position: absolute;

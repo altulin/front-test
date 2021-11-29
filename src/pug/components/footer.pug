@@ -6,14 +6,15 @@ footer.footer(data-aos="")
 			<path d="M15 21.2874L24 12L33 21.2874" fill="none" stroke="#282A33" stroke-width="1.9"/>
 		</svg>
 
-	.footer__up.footer__up--mac.percent
+	button.footer__up.footer__up--mac.percent.js-back-to-top(type="button" area-label="на верх")
 		<svg class="js-percent-circle" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 			<circle cx="24" cy="24" r="23" fill="transparent" stroke="#282A33"></circle>
 			<circle class="percent__bar" cx="24" cy="24" r="23" fill="transparent" style="stroke-dasharray: 150.796; stroke-dashoffset: 129.185;"></circle>
 		</svg>
 
-		p.percent__val.js-percent-val 12
+		p.percent__val.val
+			span.val__num.js-percent-val 0
 			span %
 
 	figure.footer__img-wrap(data-aos="fade-down" data-aos-duration="1000")

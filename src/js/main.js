@@ -12,6 +12,7 @@ import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import backToTop from './modules/backToTop';
 import './modules/preloader';
+import resize from './modules/resize';
 import progress from './components/progress';
 
 ieFix();
@@ -26,3 +27,4 @@ lazyLoading.init();
 backToTop.init();
 getStickyBlock();
 progress();
+resize();

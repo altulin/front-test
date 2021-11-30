@@ -8,7 +8,7 @@ block vars
 	-
 		var title = typeof title !== 'undefined' ? title : "Тестовое задание"
 		var description = typeof description !== 'undefined' ? description : "Тестовое задание фронтенд разработчика"
-		var image = typeof image !== 'undefined' ? image : null
+		var image = typeof image !== 'undefined' ? image : './images/share.jpg'
 	-
 		var html = {
 			attrs: {
@@ -47,9 +47,9 @@ block vars
 			msapplicationConfig: null,
 			ogDescription: description,
 			ogImage: image,
-			ogImageType: null,
-			ogImageWidth: null,
-			ogImageHeight: null,
+			ogImageType: 'image/jpeg',
+			ogImageWidth: 968,
+			ogImageHeight: 504,
 			ogImageAlt: null,
 			ogLocale: 'ru_RU',
 			ogTitle: title,

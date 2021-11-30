@@ -101,11 +101,13 @@
 
 	&__item {
 		display: block;
+		border: none;
+		padding: 0;
 		width: 25px;
 		height: 25px;
 		transition: transform $duration-normal;
 
-		+ a {
+		+ button {
 			margin-left: 20px;
 		}
 

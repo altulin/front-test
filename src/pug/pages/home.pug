@@ -8,9 +8,9 @@ main.main
 					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
 
 				h1.candidate__title(data-aos="fade-up" data-aos-duration="1000")
-					| Имя кандидата,
+					| Тулин Александр,
 					br
-					| Желаемая позиция
+					| HTML-верстальщик
 
 			.candidate__right.contacts
 				.contacts__inner
@@ -21,11 +21,11 @@ main.main
 					p.contacts__item.town г. Иркутск
 
 				.contacts__socials.socials
-					a.socials__item.socials__item--fb(href="#" aria-label="фэйсбук")
+					button.socials__item.socials__item--fb(data-social="facebook" aria-label="фэйсбук")
 						+svg("fb")
-					a.socials__item.socials__item--vk(href="#" aria-label="в контакте")
+					button.socials__item.socials__item--vk(data-social="vk" aria-label="в контакте")
 						+svg("vk")
-					a.socials__item.socials__item--tg(href="https://t.me/altulin" aria-label="телеграмм")
+					button.socials__item.socials__item--tg(data-social="tg" aria-label="телеграмм")
 						+svg("tg")
 
 			.candidate__text-block(data-aos="fade-up" data-aos-duration="1000")

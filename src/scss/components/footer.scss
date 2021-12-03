@@ -46,7 +46,43 @@
 	}
 }
 
-.footer__up--mac {
+.btn-up {
+	position: fixed;
+	right: 25px;
+	bottom: 90px;
+	z-index: 1;
+	border: 1px solid $color-red;
+	border-radius: 50%;
+	padding: 0;
+	width: 48px;
+	height: 48px;
+	background-color: transparent;
+	opacity: 0;
+	transition: opacity $duration-normal, transform $duration-normal;
+	pointer-events: none;
+
+	&.is-shown {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	@include hover {
+		transform: translateY(-4px);
+	}
+
+	@include desktop-xl {
+		right: calc((100vw - 1800px) / 2 + 25px);
+	}
+
+	@include devices {
+		right: 25px;
+		bottom: 25px;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.btn-up--mac {
 	display: none;
 	border: none;
 	opacity: 1;
@@ -58,7 +94,7 @@
 }
 
 .is-os-mac-os {
-	.footer__up {
+	.btn-up {
 		display: none;
 
 		&--mac {

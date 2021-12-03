@@ -281,20 +281,24 @@ html(class=html.classList)&attributes(html.attrs)
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body.main-body(class=body.classList)&attributes(body.attrs)
+		.scroll(data-scroll-container)
 
-		section.main-body__preloader.preloader#preloader
-			figure.preloader__img-wrap
-				+img-retina(`preloader`, `png`, `preloader`, `preloader__img`, `591`, `591`)
+			section.main-body__preloader.preloader#preloader
+				figure.preloader__img-wrap
+					+img-retina(`preloader`, `png`, `preloader`, `preloader__img`, `591`, `591`)
 
-		block body-start
-		block content
-		block scripts
-			script.
-				if (!('IntersectionObserver' in window)) {
-					var script = document.createElement("script");
-					script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
-					document.getElementsByTagName('head')[0].appendChild(script);
-				}
-			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
-			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
-		block body-end
+			block body-start
+			block content
+			block scripts
+				script.
+					if (!('IntersectionObserver' in window)) {
+						var script = document.createElement("script");
+						script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+						document.getElementsByTagName('head')[0].appendChild(script);
+					}
+				script(nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous")
+				script(nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous")
+
+				script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+				script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+			block body-end

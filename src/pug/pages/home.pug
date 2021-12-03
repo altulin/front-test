@@ -1,26 +1,26 @@
-main.main(data-scroll-container)
+main.main(data-scroll-section="true")
 	section.candidate#resume
 		.candidate__inner.container
 
 			.candidate__left
 
-				a.candidate__logo.logo(href=data.header.links.logo)
+				a.candidate__logo.logo(href=data.header.links.logo data-scroll="true" data-scroll-position="top" data-scroll-speed="5" data-scroll-delay="0.05")
 					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
 
-				h1.candidate__title(data-aos="fade-up" data-aos-duration="1000")
+				h1.candidate__title(data-aos="fade-up" data-aos-duration="1000" data-scroll="true" data-scroll-position="top" data-scroll-speed="5" data-scroll-delay="0.05")
 					| Тулин Александр,
 					br
 					| HTML-верстальщик
 
 			.candidate__right.contacts
-				.contacts__inner
+				.contacts__inner(data-scroll="true" data-scroll-position="top" data-scroll-speed="3" data-scroll-delay="0.05")
 					a.contacts__item.mail.link-hover(href="mailto:al.tulin@gmail.com")
 						span.link-hover__span(data-letters="al.tulin@gmail.com") al.tulin@gmail.com
 					a.contacts__item.phone.link-hover(href="tel:+7 (902) 515-96-32")
 						span.link-hover__span(data-letters="+7 (902) 515-96-32") +7 (902) 515-96-32
 					p.contacts__item.town г. Иркутск
 
-				.contacts__socials.socials
+				.contacts__socials.socials(data-scroll="true" data-scroll-position="top" data-scroll-speed="2" data-scroll-delay="0.05")
 					button.socials__item.socials__item--fb(data-social="facebook" aria-label="фэйсбук")
 						+svg("fb")
 					button.socials__item.socials__item--vk(data-social="vk" aria-label="в контакте")
@@ -34,7 +34,7 @@ main.main(data-scroll-container)
 
 	section.standing#about
 		h2.standing__title.visually-hidden Мой стаж работы и образование
-		.standing__inner.container
+		.standing__inner.container#standing__inner
 
 			.standing__left.experience
 				h3.experience__title.title Опыт работы
@@ -77,7 +77,7 @@ main.main(data-scroll-container)
 							p.skill__job= item.job
 							p.skill__text= item.text
 
-			.standing__man.man()
+			.standing__man.man(data-scroll="true" data-scroll-sticky="true" data-scroll-target="#standing__inner")
 				figure.man__img-wrap
 					+img-retina(`man`, `png`, `мужчина`, `man__img`, `500`, `500`, 768)
 

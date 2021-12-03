@@ -1,5 +1,6 @@
 import helpers from '../helpers';
 import toTop from '../components/svgAnimation';
+import locomotive from './locomotive';
 
 /**
 * Модуль "Возврат наверх"
@@ -12,7 +13,8 @@ const init = () => {
 	let lastScrollTop = 0;
 
 	helpers.$document.on('click.backTop', `${className}`, () => {
-		helpers.scrollTo($('body'));
+		// helpers.scrollTo($('body'));
+		locomotive.scroll.scrollTo('top');
 	});
 
 	helpers.$window.on('scroll.backTop', () => {

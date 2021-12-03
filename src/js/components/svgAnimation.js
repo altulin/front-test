@@ -1,5 +1,9 @@
 import Vivus from 'vivus';
+const elem = $('#back-to-top');
+let toTop;
 
-const toTop = new Vivus('back-to-top', {duration: 200});
+if (elem.length > 0) {
+	toTop = new Vivus('back-to-top', {duration: 200});
+}
 
 export default toTop;

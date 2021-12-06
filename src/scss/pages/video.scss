@@ -1,0 +1,16 @@
+.video {
+	margin-top: 80px;
+
+	&__inner {
+		position: relative;
+		padding-top: 56.25%;
+	}
+
+	&__player {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,5 +1,5 @@
 import helpers from '../helpers';
-import AOS from 'aos';
+import gsap from './gsap';
 
 const imagesAll = document.images;
 
@@ -26,7 +26,10 @@ function imageLoader(elapsed) {
 		setTimeout(() => {
 			if (!preloader.classList.contains('preloader-style__loader__done')) {
 				preloader.classList.add('preloader-style__loader__done');
-				AOS.init();
+				gsap.animationY('candidate__title');
+				gsap.animationY('candidate__text-block');
+				gsap.animationText('standing__left', 'left');
+				gsap.animationText('standing__right', 'right');
 			}
 		}, elapsed);
 	}

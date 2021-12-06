@@ -13,6 +13,8 @@ import backToTop from './modules/backToTop';
 import './modules/preloader';
 import resize from './modules/resize';
 import locomotive from './modules/locomotive';
+import './modules/gsap';
+import './modules/video';
 import progress from './components/progress';
 
 ieFix();

@@ -201,16 +201,10 @@
 			align-items: center;
 			height: 50px;
 		}
-
-		@include hover {
-			.header__inner {
-				//
-			}
-		}
 	}
 
 	&.main-body__header-wrapper {
 		z-index: 1;
-		height: 50px !important;
+		height: 50px;
 	}
 }

@@ -4,10 +4,10 @@ main.main(data-scroll-section="true")
 
 			.candidate__left
 
-				a.candidate__logo.logo(href=data.header.links.logo data-scroll="true" data-scroll-position="top" data-scroll-speed="5" data-scroll-delay="0.05")
+				a.candidate__logo.logo(href=data.header.links.logo)
 					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `150`, `150`)
 
-				h1.candidate__title(data-aos="fade-up" data-aos-duration="1000" data-scroll="true" data-scroll-position="top" data-scroll-speed="5" data-scroll-delay="0.05")
+				h1.candidate__title(data-scroll="true" data-scroll-position="top" data-scroll-speed="3" data-scroll-delay="0.05")
 					| Тулин Александр,
 					br
 					| HTML-верстальщик
@@ -28,9 +28,9 @@ main.main(data-scroll-section="true")
 					button.socials__item.socials__item--tg(data-social="tg" aria-label="телеграмм")
 						+svg("tg")
 
-			.candidate__text-block(data-aos="fade-up" data-aos-duration="1000")
+			.candidate__text-block
 
-				p.candidate__text(data-aos="fade-up" data-aos-duration="1000") Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+				p.candidate__text(data-scroll="true" data-scroll-position="top" data-scroll-speed="2" data-scroll-delay="0.05") Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
 
 	section.standing#about
 		h2.standing__title.visually-hidden Мой стаж работы и образование
@@ -89,3 +89,9 @@ main.main(data-scroll-section="true")
 					li.attainments__item
 						h3.attainments__sub-title= item.title
 						p.attainments__text= item.text
+
+	section.video.container
+		.video__inner
+			video-js.video__player.video-js#video-js
+				source(src="./video/ocean.mp4" type="video/mp4")
+				source(src="./video/ocean.webm" type="video/webm")
